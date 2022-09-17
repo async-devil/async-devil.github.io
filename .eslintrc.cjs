@@ -22,7 +22,7 @@ const mainRules = {
 	"object-curly-newline": 0,
 
 	"no-nested-ternary": 0,
-	"no-bitwise": 1,
+	"no-bitwise": 0,
 
 	"import/no-extraneous-dependencies": 0,
 	"no-return-await": 0,
