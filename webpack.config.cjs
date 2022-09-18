@@ -5,6 +5,7 @@ const path = require("path");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const config = {
 	entry: "./src/index.ts",
@@ -52,6 +53,7 @@ const config = {
 		new HTMLWebpackPlugin({
 			template: "src/index.html",
 		}),
+		new CopyWebpackPlugin({ patterns: [{ from: "./src/assets", to: "assets" }] }),
 		new webpack.HotModuleReplacementPlugin(),
 	],
 	optimization: {
