@@ -2,7 +2,6 @@ const webpack = require("webpack");
 
 const path = require("path");
 
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -45,10 +44,6 @@ const config = {
 		extensions: [".ts", ".js"],
 	},
 	plugins: [
-		new BundleAnalyzerPlugin({
-			analyzerMode: "static",
-			openAnalyzer: false,
-		}),
 		new CleanWebpackPlugin(),
 		new HTMLWebpackPlugin({
 			template: "src/index.html",
