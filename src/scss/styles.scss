@@ -1,0 +1,83 @@
+@import "./main-page.scss";
+
+@mixin side-m {
+	padding: 0 1rem;
+
+	@media screen and (min-width: 1024px) {
+		padding: 0 2.5rem;
+	}
+}
+
+body {
+	display: flex;
+
+	justify-content: center;
+
+	background-color: #1d1d1d;
+
+	canvas {
+		position: absolute;
+
+		z-index: 0;
+	}
+
+	#app {
+		width: 100%;
+		height: 100%;
+
+		z-index: 1;
+
+		color: white;
+
+		font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+			"Segoe UI Symbol", "Noto Color Emoji";
+		line-height: 1.5;
+
+		.swiper {
+			height: 100%;
+
+			padding: 0;
+
+			.slide-wrapper {
+				@include side-m();
+
+				height: 100%;
+			}
+		}
+
+		footer {
+			width: 100%;
+
+			position: fixed;
+
+			left: 0;
+			bottom: 0;
+
+			margin-top: 1.25rem;
+			padding: 1rem 0;
+
+			text-align: center;
+
+			p {
+				font-size: 0.875rem;
+				line-height: 1.25rem;
+
+				color: rgb(209, 213, 219);
+			}
+		}
+
+		.access-button {
+			padding: 0.5rem 0.75rem;
+
+			border: 2px solid #282828;
+			border-radius: 0.2rem;
+
+			color: rgb(229, 231, 235);
+
+			&:hover {
+				background-color: #28282866;
+			}
+		}
+	}
+}
