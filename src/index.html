@@ -21,64 +21,69 @@
 		<meta property="og:image" content="" />
 		<meta property="og:description" content="Software Engineer / Tech Enthusiast" />
 		<meta property="og:type" content="website" />
+
+		<style>
+			@font-face {
+				font-family: "Neue Montreal";
+				font-weight: 200;
+				src: url("/assets/fonts/PPNeueMontreal-Thin.woff2") format("woff2");
+			}
+			@font-face {
+				font-family: "Neue Montreal";
+				font-weight: 400;
+				src: url("/assets/fonts/PPNeueMontreal-Book.woff2") format("woff2");
+			}
+			@font-face {
+				font-family: "Neue Montreal";
+				font-weight: 600;
+				src: url("/assets/fonts/PPNeueMontreal-SemiBold.woff2") format("woff2");
+			}
+		</style>
 	</head>
 
 	<body>
 		<div id="app">
 			<main class="swiper">
-				<div class="swiper-wrapper">
-					<article class="swiper-slide">
-						<div class="slide-wrapper main-page">
-							<header>
-								<a href="/" title="Timofii Khomenko">
-									<h1 class="header__title">Timofii Khomenko</h1>
-									<p>Software Engineer / Tech Enthusiast</p>
-								</a>
-							</header>
-							<section>
-								<div class="main-page__title">
-									<h2>Hire Me</h2>
-									<p>
-										Timofii is currently
-										<strong>available</strong> for full-time / part-time work
-									</p>
-								</div>
-								<div class="main-page__assets">
-									<a
-										href="/assets/resume.pdf"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Khomenko Timofii Resume - Hire Me"
-										class="access-button"
-									>
-										<span>Resume</span>
-									</a>
-									<a
-										href="https://www.linkedin.com/in/timofii-khomenko/"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Khomenko Timofii on LinkedIn"
-										class="access-button"
-									>
-										<span>LinkedIn</span>
-									</a>
-								</div>
-							</section>
+				<div class="main-page">
+					<header>
+						<a href="/" title="Timofii Khomenko">
+							<h1 class="header__title">Timofii Khomenko</h1>
+							<p>Software Engineer / Tech Enthusiast</p>
+						</a>
+					</header>
+					<section>
+						<div class="main-page__title">
+							<h2>Hire Me</h2>
+							<p>
+								Timofii is currently
+								<strong>unavailable</strong> for full-time / part-time work
+							</p>
 						</div>
-					</article>
-					<article class="swiper-slide">
-						<div class="slide-wrapper">Slide 2</div>
-					</article>
-					<article class="swiper-slide">
-						<div class="slide-wrapper">Slide 3</div>
-					</article>
+						<div class="main-page__assets">
+							<a
+								href="/assets/resume.pdf"
+								target="_blank"
+								rel="noopener noreferrer"
+								title="Khomenko Timofii Resume - Hire Me"
+								class="access-button"
+							>
+								<span>Resume</span>
+							</a>
+							<a
+								href="https://www.linkedin.com/in/timofii-khomenko/"
+								target="_blank"
+								rel="noopener noreferrer"
+								title="Khomenko Timofii on LinkedIn"
+								class="access-button"
+							>
+								<span>LinkedIn</span>
+							</a>
+						</div>
+					</section>
 				</div>
-
-				<div class="swiper-button swiper-button-prev">Previous</div>
-				<div class="swiper-button swiper-button-next">Next</div>
 			</main>
 			<footer>
-				<p>Faber est suae quisque fortunae</p>
+				<p class="footer__quote">Faber est suae quisque fortunae</p>
 				<p>© 2022 Timofii Khomenko</p>
 			</footer>
 		</div>
