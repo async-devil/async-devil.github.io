@@ -44,7 +44,8 @@
 	.main-page__links {
 		.links__buttons {
 			display: flex;
-			column-gap: 0.5rem;
+			flex-wrap: wrap;
+			gap: 0.5rem;
 
 			margin-top: 0.75rem;
 		}
