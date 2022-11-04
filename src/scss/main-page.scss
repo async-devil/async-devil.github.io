@@ -25,6 +25,8 @@
 	}
 
 	section {
+		padding-bottom: 2rem;
+
 		h2 {
 			font-weight: 200;
 			font-size: 1.875rem;
@@ -37,8 +39,10 @@
 				font-family: 800;
 			}
 		}
+	}
 
-		.main-page__assets {
+	.main-page__links {
+		.links__buttons {
 			display: flex;
 			column-gap: 0.5rem;
 
