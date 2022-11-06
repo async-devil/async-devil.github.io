@@ -48,7 +48,12 @@ const config = {
 		new HTMLWebpackPlugin({
 			template: "src/index.html",
 		}),
-		new CopyWebpackPlugin({ patterns: [{ from: "./src/assets", to: "assets" }] }),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: "./src/robots.txt", to: "robots.txt" },
+				{ from: "./src/assets", to: "assets" },
+			],
+		}),
 		new webpack.HotModuleReplacementPlugin(),
 	],
 	optimization: {
