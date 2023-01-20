@@ -21,15 +21,16 @@ if (!ctx) throw new Error("No context");
 
 const screen = new Screen(xLength, yLength);
 
-function render(fps: number, callback: () => unknown) {
+function render(fps: number, callback: () => unknown, numberOfCalls = 30) {
 	let then = new Date().getTime();
 
 	const interval = 1000 / fps;
+	let loopsCount = 0;
 
 	callback();
 
 	function loop() {
-		window.requestAnimationFrame(loop);
+		const animationRequest = window.requestAnimationFrame(loop);
 
 		const now = new Date().getTime();
 		const delta = now - then;
@@ -37,8 +38,11 @@ function render(fps: number, callback: () => unknown) {
 		if (delta > interval) {
 			then = now - (delta % interval);
 
+			loopsCount += 1;
 			callback();
 		}
+
+		if (loopsCount > numberOfCalls) window.cancelAnimationFrame(animationRequest);
 	}
 
 	loop();

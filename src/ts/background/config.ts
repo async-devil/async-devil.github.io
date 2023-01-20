@@ -5,5 +5,5 @@ export type Config = {
 
 export const config: Config = {
 	multiplier: 3,
-	fps: 0.2,
+	fps: 0.75,
 };
